@@ -1,15 +1,7 @@
-//APRENDENDO SOBRE CLOSURES
-//AO DECLARAR A VARIÁVEL O CÓDIGO DA FUNÇÃO É EXECUTADO
-let algumaCoisa = voceFalaAdeus();//VAI RETORNAR Adeus
 
-function voceFalaAdeus() {
-  document.write("Adeus");
-  function euFaloOla() {
-    document.write("<br> ola");
-  }
-  return euFaloOla;
-}
+//TRABALHANDO COM STRINGS
 
-//AGORA QUE A VARIÁVEL RECEBEU UMA FUNÇÃO ELA PODE SER EXECUTADA
-algumaCoisa(); //VAI RETORNAR ola
+let frase = "Como saberemos o dia de amanhã";
 
+console.log(frase.slice(2,5));
+console.log(frase.substring(2,5));
