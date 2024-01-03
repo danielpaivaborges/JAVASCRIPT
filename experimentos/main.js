@@ -1,24 +1,18 @@
-//ESTUDANDO OBJETOS - ESTRUTURAS DE DADOS
+const usuario = {
+  nome: "daniel",
+  idade: 50,
+  endereco: {
+    rua: "bahia",
+    numero: 7,
+    bairro: "sao geraldo",
+    cep: {
+      codigo: "35617-000",
+      cidade: "Serra da Saudade",
+    },
+    mostraCidade() {
+      return this.cep.cidade;
+    },
+  },
+};
 
-
-
-// const user = {
-//   nome: "daniel",
-//   idade: 50,
-//   endereco: {
-//     rua: "bahia",
-//     numero: 7,
-//     bairro: "são geraldo",
-//   },
-// };
-
-// const { nome, ...rest } = user;
-// console.log(nome);
-// console.log(JSON.stringify(rest));
-
-
-const lista = [1,2,3,4,5,6,7,8,9,"daniel"];
-const [primeiro, , segundo, ...rest] = lista;
-
-console.log(JSON.stringify({primeiro, segundo}));
-console.log(JSON.stringify(rest));
+console.log(usuario.endereco.mostraCidade?.());
