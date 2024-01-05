@@ -1,18 +1,19 @@
-const usuario = {
-  nome: "daniel",
-  idade: 50,
-  endereco: {
-    rua: "bahia",
-    numero: 7,
-    bairro: "sao geraldo",
-    cep: {
-      codigo: "35617-000",
-      cidade: "Serra da Saudade",
-    },
-    mostraCidade() {
-      return this.cep.cidade;
-    },
-  },
+console.time("pedra");
+
+const soma = (a, b) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(a + b);
+    }, 2000);
+  });
 };
 
-console.log(usuario.endereco.mostraCidade?.());
+soma(5, 8)
+  .then((resposta) => {
+    console.log(resposta);
+  })
+  .then(() => {
+    setTimeout(() => {
+      console.timeEnd("pedra");
+    }, 2000);
+  });
